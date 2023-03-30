@@ -1,0 +1,13 @@
+GitKraken is a GUI Git client that provides an easy-to-use interface for managing Git repositories. Visual Studio Code (VS Code) is a code editor that also includes Git integration. Here are the general steps to use GitKraken with VS Code:
+
+Clone the Git repository using GitKraken: Open GitKraken and clone the repository you want to work on. You can do this by clicking the "Clone a Repo" button on the GitKraken home screen, entering the repository URL, and selecting a local directory to clone the repository into.
+
+Open the cloned repository in VS Code: Once the repository is cloned, you can open it in VS Code by selecting "File" > "Open Folder" and navigating to the local directory where the repository was cloned.
+
+Make changes to the code: Use VS Code to make changes to the code in the repository. You can use the built-in Git integration in VS Code to stage and commit your changes.
+
+Push changes to GitKraken: Once you have committed your changes, you can push them to the GitKraken repository by clicking the "Push" button in the Git panel in VS Code. This will upload your changes to the remote repository on GitKraken.
+
+Pull changes from GitKraken: If other people are also working on the same repository, you may need to pull changes from GitKraken to your local repository to ensure that you are working with the latest version of the code. You can do this by clicking the "Pull" button in the Git panel in VS Code.
+
+Resolve merge conflicts: If there are conflicting changes between your local repository and the remote repository on GitKraken, you may need to resolve merge conflicts. You can use the built-in merge conflict resolution tools in GitKraken or VS Code to do this.
