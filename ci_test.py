@@ -1,5 +1,3 @@
-# test_sample.py
-
 def test_addition(x,y):
   z=x+y
   
@@ -7,4 +5,4 @@ def test_addition(x,y):
  
 
   
-  print(test_addition(5,6))
+print(test_addition(5,6))
