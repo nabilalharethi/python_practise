@@ -1,8 +1,12 @@
-def test_addition(x,y):
-  z=x+y
-  
-  return z
- 
+import pytest
 
-  
-print(test_addition(5,6))
+@pytest.fixture
+def x(request):
+    x = 1
+    def fin():
+        x = None
+    request.addfinalizer(fin)
+    return x
+
+def test_addition(x):
+    assert x + 1 == 2
