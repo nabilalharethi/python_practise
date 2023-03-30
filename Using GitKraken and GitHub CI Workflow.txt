@@ -1,0 +1,50 @@
+Introduction:
+GitKraken is a popular Git client that allows you to manage your code repositories easily. GitHub CI (Continuous Integration) is a powerful tool that allows you to automate your code testing and deployment. In this README file, we will guide you through the process of setting up GitKraken and GitHub CI to work together to automate your workflow.
+
+Step 1: Setting Up GitKraken
+Before we start, make sure that you have GitKraken installed on your machine. If you don't have it yet, you can download it from https://www.gitkraken.com/download. Once you have installed GitKraken, open it and log in to your GitHub account. This will allow you to access your GitHub repositories from within GitKraken.
+
+Step 2: Creating a New Repository
+Now that we have GitKraken set up, let's create a new repository on GitHub. Log in to your GitHub account and click the "+" button in the top right corner of the screen. Select "New repository" from the dropdown menu. Give your repository a name, a description (optional), and select whether you want to make it public or private. Click "Create repository" to create your new repository.
+
+Step 3: Cloning the Repository in GitKraken
+Now that we have created a new repository on GitHub, let's clone it in GitKraken. Open GitKraken and click the "Clone a repo" button on the main screen. Select "GitHub.com" as the hosting service and select the repository you just created. Choose a location on your local machine where you want to clone the repository and click "Clone the repo!".
+
+Step 4: Setting Up GitHub CI Workflow
+We have now set up our repository on both GitKraken and GitHub. Let's set up the GitHub CI workflow to automate our workflow. In the root directory of your repository, create a new file called ".github/workflows/main.yml". This file will contain the instructions for our GitHub CI workflow.
+
+Here is an example of what the contents of the file could look like:
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run tests
+      run: |
+        pytest
+
+
+This workflow will run the test suite whenever code is pushed to the main branch of the repository. You can customize this workflow to suit your needs.
+
+Step 5: Pushing Changes to GitHub
+
+Now that we have set up the GitHub CI workflow, let's push our changes to GitHub.
+Open GitKraken and make a change to one of the files in your repository. 
+Commit your changes and push them to the main branch.
+This will trigger the GitHub CI workflow, and you should be able to see the status of the workflow on your GitHub repository page.
